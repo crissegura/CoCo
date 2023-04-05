@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+.App{
+  font-family: 'Righteous', cursive;
+  color: #23325f;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.divImgInicio{
+  margin-bottom: 4rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.imgInicio1{
+  width: 20rem;
 }
 
-.App-header {
-  background-color: #282c34;
+.imgInicio2{
+  width: 20rem;
+}
+
+.inicio, .iniciarsesion, .registrarme, .confirmarregistro, .crearUnirse{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.inicio{
+  background-image: url('../src/media/background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+#btn{
+  background-color: #2f57a2;
+  padding:.8rem;
   color: white;
+  border: none;
+  border-radius: 30px;
+  width: 18rem;
 }
 
-.App-link {
-  color: #61dafb;
+.h3Re{
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.h3confreg{
+  font-size: 2rem;
+  margin-bottom: 2rem
+}
+
+.pconfreg{
+  text-align: center;
+  width: 90%;
+  font-size: 1.6rem;
+}
+
+.inputInSe{
+  border: solid 1px rgba(128, 128, 128, 0.432);
+  padding: .8rem ;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 255, 0.219);
+  width: 20rem;
+}
+
+.errorECClass{
+  display: none;
 }
