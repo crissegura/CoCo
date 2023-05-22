@@ -3,6 +3,64 @@
   color: #23325f;
 }
 
+.contenedorHeader{
+  width: 100%;
+}
+
+.header{
+  position: absolute;
+  top: 0;
+  background-color: #2f57a2;
+  width: 100%;
+  min-height: 4rem;
+  max-height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header2{
+  position: absolute;
+  top: 0;
+  background-color: #2f57a2;
+  width: 100%;
+  min-height: 4rem;
+  max-height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.imgHeader{
+  width: 4rem;
+}
+
+.CoCoHe{
+  font-size: 3rem;
+  color: white;
+}
+
+.navegador{
+  background-color: #2f57a2;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  min-height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.btnNavegador{
+  border: none;
+  background-color: transparent;
+}
+
+.imgNavegador{
+  width: 3.8rem;
+  height: 3.5rem;
+}
+
 .divImgInicio{
   margin-bottom: 4rem;
 }
@@ -15,12 +73,21 @@
   width: 20rem;
 }
 
-.inicio, .iniciarsesion, .registrarme, .confirmarregistro, .crearUnirse{
+.inicio, .iniciarsesion, .registrarme, .confirmarregistro, .crearUnirse, .crearComedor, .unirseComedor, .containerInicio, .agregarproducto, .divMenu{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.stock, .contenidoRecetas, .contenedorCrearReceta{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  margin-top: 5rem;
 }
 
 .inicio{
@@ -66,4 +133,123 @@
 
 .errorECClass{
   display: none;
+}
+
+.inputError{
+  background-color: rgba(255, 0, 0, 0.301);
+}
+
+.contenedorComedores{
+  width: 100%;
+  padding-top: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.pcomedores{
+  width: 15rem;
+  background-color: transparent;
+  padding: .5rem;
+  border: none;
+  color: #23325f;
+  border-bottom: solid .5px #23325f42;
+}
+
+.nombreProductos{
+  background-color:#2f57a237;
+  border-radius: 20px;
+  padding: .3em;
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2rem;
+  font-size: 20px;
+  color: #2f57a2;
+}
+
+.descripcionStock{
+  font-size: 18px;
+  color: #2f57a2;
+  padding-left: 2rem;
+}
+
+/* Loader */
+.custom-loader {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  padding:1px;
+  background:conic-gradient(#0000 10%,#766DF4) content-box;
+  -webkit-mask:
+    repeating-conic-gradient(#0000 0deg,#000 1deg 20deg,#0000 21deg 36deg),
+    radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 calc(100% - 8px));
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+  animation:s4 1s infinite steps(10);
+}
+@keyframes s4 {to{transform: rotate(1turn)}}
+
+.divIngredientes{
+  display: none;
+}
+
+.divSelIng{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.inputCant1{
+  color: #23325f;
+  border: solid 1px rgba(128, 128, 128, 0.432);
+  padding: .8rem ;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 255, 0.219);
+  width: 10em;
+}
+
+.inputCant2{
+  color: #23325f;
+  width: 4rem;
+  border: solid 1px rgba(128, 128, 128, 0.432);
+  padding: .8rem ;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 255, 0.219);
+}
+
+.pLi{
+  margin: 0;
+  padding: .1rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+#btnmas{
+  background-color: transparent;
+  color: white;
+  border: solid 1px white;
+  border-radius: 5px;
+}
+
+#btnquitar{
+  border: none;
+  background-color: transparent;
+}
+
+.imgDelete{
+  width: 2rem;
+}
+
+.Modal{
+  font-family: 'Righteous', cursive;
+  color: white;
+  background-color: #23325f;
+}
+
+.alertYaEsta{
+  background-color: rgba(255, 0, 0, 0.637);
+  color: white;
 }

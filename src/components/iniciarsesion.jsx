@@ -10,6 +10,8 @@ const IniciarSesion = ( ) => {
   const navigation = useNavigate()
 
   const [user, setUser] = useState([]);
+  const [comedor, setComedor] = useState([]);
+  const [nombrecomedor, setNombrecomedor] = useState([]);
   const [email, setEmail] = useState([]);
   const [contraseña, setContraseña] = useState([]);
 
@@ -18,7 +20,13 @@ const IniciarSesion = ( ) => {
     setUser(res.data)
   }
 
+  const getComedor = async ( ) => {
+    const res = await axios.get('http://localhost:5500/vercomedor')
+    setComedor(res.data)
+  }
+
   useEffect(()=>{
+    getComedor()
     getUser()
   },[])
     
@@ -33,7 +41,12 @@ const IniciarSesion = ( ) => {
 
   const loguearme = ( ) => {
     login()
-    navigation(`/${email}`)
+    let tieneComedor = comedor.find((com)=>com.creador===usuarioEncontrado.email)
+    
+    tieneComedor!==undefined?
+      navigation(`/${email}/inicio/${tieneComedor.nombre}`)
+    :
+      navigation(`/${email}`)
   }
 
   const ingresar = ( ) => {
@@ -42,6 +55,8 @@ const IniciarSesion = ( ) => {
     :
       document.getElementById('errorEC').classList.remove('errorECClass')
   }
+
+
 
   return (
     <div className='iniciarsesion'>
